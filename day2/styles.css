@@ -1,0 +1,148 @@
+/* 1. Box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Basic page styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* 3. Header styles */
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 24px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 8px 0 16px;
+}
+
+/* 4. Navigation with Flexbox */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+/* Visible hover style */
+nav a:hover {
+  background-color: white;
+  color: #333;
+  border-radius: 4px;
+}
+
+/* 5. Main content */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* 6. Features list using CSS Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* 7. Shortcuts table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+/* 8. Feedback form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form p {
+  margin: 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+}
+
+/* 9. Button transition */
+button {
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+  transform: translateY(-2px);
+}
+
+/* 10. Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* 11. Responsive styles */
+@media (max-width: 600px) {
+  header {
+    padding: 16px;
+  }
+
+  main {
+    padding: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
